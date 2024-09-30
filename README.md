@@ -1,8 +1,16 @@
-# React + Vite
+# React Tutorial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a self learning React project.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Dependencies
+- **ESlint** For JavaScript debugging. Eslint extension for Visual Studio Code also avaliable [here](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).<br> To install, run this command in your terminal:
+```bash
+npm i --save-dev eslint @typescript-eslint/parser eslint-config-next eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
+```
+---
+- **PropType** Property type checker for Javascript files
+<br>To install, run this commnd in your terminal:
+```bash
+npm install --save prop-types
+```
+Documentation also avaliable in [this](https://github.com/facebook/prop-types) repository.
