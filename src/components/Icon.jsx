@@ -1,6 +1,7 @@
+import styles from './styles/icon.css'
 export function IconA() {
   return (
-    <div>
+    <div className={styles.blue}>
       ICON A
     </div>
   )
@@ -8,7 +9,7 @@ export function IconA() {
 
 export function IconB() {
   return (
-    <div>
+    <div className={styles.blue}>
       ICON B
     </div>
   )
