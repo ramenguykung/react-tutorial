@@ -1,15 +1,34 @@
-import Header from './components/Header'
-import { IconA, IconB } from './components/Icon'
-import Image from './components/Image'
+import Checkbox from "./components/Checkbox"
+import { useState } from "react"
+
 function App() {
+	const list = [
+		{
+			text: '1',
+			isChecked: true
+		},
+		{
+			text: '2',
+			isChecked: false
+		},
+		{
+			text: '3',
+			isChecked: true
+		}
+	]
 	return (
 		<div>
-			<Header/>
-			Hello World!
-			<IconA/>
-			<IconB/>
-			<Image 
-				imgUrl='https://fastly.picsum.photos/id/590/200/300.jpg?hmac=rMKCd22eXuQjtVujiifOrJzm-dBuhO8blicB93xN4y4'/>
+			{
+				list.map((todo, index) => {
+					return (
+						<Checkbox
+							key={index}
+							text={todo.text}
+							isChecked={todo.isChecked}
+						/>
+					)
+				})
+			}
 		</div>
 	)
 }
