@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import PropTypes from 'prop-types';
 
-function VideoPlayer({ src, isPlaying }) {
+export default function VideoPlayer({ src, isPlaying }) {
   const ref = useRef(null);
 
   if (isPlaying) {
@@ -13,6 +13,6 @@ function VideoPlayer({ src, isPlaying }) {
   return <video ref={ref} src={src} loop playsInline />;
 }
 VideoPlayer.propTypes = {
-  src: PropTypes.string,
-  isPlaying: PropTypes.bool
+  src: PropTypes.any,
+  isPlaying: PropTypes.any
 }
