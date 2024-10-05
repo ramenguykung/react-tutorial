@@ -17,12 +17,19 @@ function App() {
 			isChecked: true
 		}
 	]
+	const [isPlaying, setisPlaying] = useState(false)
+	
 	const [counter, setCounter] = useState(0)
+
 	function buttonClick() {
 		setCounter(counter + 1)
 	}
+
 	function buttonClickdecrese() {
 		setCounter(counter - 1)
+	}
+	function playerTrigger() {
+		setisPlaying(!isPlaying)
 	}
 	return (
 		<div>
@@ -48,8 +55,12 @@ function App() {
 				})
 			}
 			<Video
+				isPlaying={isPlaying}
 				src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
 			/>
+			<button
+				onClick={playerTrigger}
+			>{isPlaying ? 'Pause' : 'Play'}</button>
 		</div>
 	)
 }
